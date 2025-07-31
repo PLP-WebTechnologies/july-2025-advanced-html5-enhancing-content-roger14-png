@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Example of an HTML5 multi-section page with lists, tables, media, and a complete HTML5 form">
+    <title>Enhanced HTML5 Page with Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        header, section, footer {
+            margin-bottom: 30px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 10px 0;
+        }
+        table, th, td {
+            border: 1px solid #333;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        fieldset {
+            border: 2px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin: 8px 0 4px;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Our Information Page</h1>
+    <p>This page demonstrates lists, tables, media content, and an accessible HTML5 form with built-in validation.</p>
+</header>
+
+<section>
+    <h2>Our Top Services</h2>
+    <ul>
+        <li>Web Development</li>
+        <li>Mobile App Design</li>
+        <li>Cloud Hosting</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Pricing Table</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Service</th>
+                <th>Duration</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Web Development</td>
+                <td>2 Weeks</td>
+                <td>$500</td>
+            </tr>
+            <tr>
+                <td>Mobile App Design</td>
+                <td>3 Weeks</td>
+                <td>$750</td>
+            </tr>
+            <tr>
+                <td>Cloud Hosting</td>
+                <td>1 Year</td>
+                <td>$120</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section>
+    <h2>Watch Our Intro Video</h2>
+    <video controls width="400">
+        <source src="sample-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</section>
+
+<section>
+    <h2>Contact & Registration Form</h2>
+    <form action="#" method="post">
+        
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="John Doe" required minlength="3">
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="example@mail.com" required autocomplete="email">
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="+1234567890" pattern="[+]{1}[0-9]{10,14}" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Account Details</legend>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required minlength="5" maxlength="15">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required minlength="8">
+
+            <label for="account-type">Account Type:</label>
+            <select id="account-type" name="account-type" required>
+                <option value="">-- Select Account Type --</option>
+                <option value="personal">Personal</option>
+                <option value="business">Business</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Additional Information</legend>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="bio">Short Bio:</label>
+            <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself..." minlength="10"></textarea>
+
+            <label>
+                <input type="checkbox" name="terms" required> I agree to the terms and conditions
+            </label>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2025 Example Company. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
